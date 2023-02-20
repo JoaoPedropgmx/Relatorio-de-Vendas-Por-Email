@@ -39,5 +39,5 @@ mail.HTMLBody = '''
 
 
 
-'''.format(Faturamento_por_loja.to_html(),qt_produtos_vd_por_loja.to_html(),Ticket_Médio.to_html())
+'''.format(Faturamento_por_loja.to_html(formatters={'Valor Final': 'R${:,.2f}'.format}),qt_produtos_vd_por_loja.to_html(),Ticket_Médio.to_html(formatters={'Ticket Médio': 'R${:,.2f}'.format}))
 mail.send
